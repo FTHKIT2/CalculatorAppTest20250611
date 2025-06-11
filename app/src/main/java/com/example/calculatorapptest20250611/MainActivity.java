@@ -8,6 +8,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import android.view.View;
+import android.widget.*;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,5 +23,17 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+        Button button1=findViewById(R.id.button1);
+        TextView result=findViewById(R.id.result);
+        button1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                String x=result.getText().toString()+"1";
+                result.setText(x);
+            }
+        });
     }
+
 }
